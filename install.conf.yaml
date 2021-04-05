@@ -12,6 +12,7 @@
       force: true
       path: zshrc
     ~/.zsh:
+    ~/.npmrc:
 
 - shell:
   - ["git submodule update --init --recursive", Installing submodules]
