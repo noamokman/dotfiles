@@ -9,6 +9,8 @@
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.zshrc:
+      force: true
+      path: zshrc
     ~/.zsh:
 
 - shell:
