@@ -1,0 +1,7 @@
+[user]
+	name = Noam Okman
+	email = noamokman@gmail.com
+[hub]
+	protocol = https
+[core]
+	excludesfile = ~/.gitignore_global

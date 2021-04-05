@@ -1,3 +1,15 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.zshrc:
+    ~/.zsh:
+
+- shell:
+  - ["git submodule update --init --recursive", Installing submodules]
