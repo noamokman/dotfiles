@@ -5,6 +5,9 @@
 
 - clean: ['~']
 
+- shell:
+  - ["git submodule update --init --recursive", Installing submodules]
+
 - link:
     ~/.gitconfig:
     ~/.gitignore_global:
@@ -14,6 +17,5 @@
     ~/.zsh:
     ~/.npmrc:
     ~/.oh-my-zsh:
-
-- shell:
-  - ["git submodule update --init --recursive", Installing submodules]
+      force: true
+      path: oh-my-zsh
