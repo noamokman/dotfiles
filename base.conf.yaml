@@ -13,9 +13,8 @@
     ~/.gitignore_global:
     ~/.zshrc:
       force: true
-      path: zshrc
     ~/.zsh:
     ~/.npmrc:
+      force: true
     ~/.oh-my-zsh:
       force: true
-      path: oh-my-zsh
