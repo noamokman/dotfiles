@@ -12,3 +12,9 @@
 	path = oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
 	ignore = dirty
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "dotbot_plugin_aptget"]
+	path = dotbot_plugin_aptget
+	url = https://github.com/dein0s/dotbot_plugin_aptget.git

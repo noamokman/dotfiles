@@ -1,0 +1,10 @@
+- brew:
+    - curl
+    - git
+    - zsh
+
+- cask:
+    - docker
+    - google-chrome
+    - iterm2
+    - vlc
