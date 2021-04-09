@@ -9,6 +9,5 @@
     - iterm2
     - vlc
 
-
 - shell:
-  - [chsh -s $(which zsh), Making zsh the default shell]
+  - ['[[ "$SHELL" = */zsh ]] && chsh -s $(which zsh)', Making zsh the default shell]
