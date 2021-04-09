@@ -3,12 +3,18 @@
     - git
     - zsh
     - nodejs
+    - kubernetes-cli
+    - kubectx
 
 - cask:
     - docker
     - google-chrome
     - iterm2
     - vlc
-
-- shell:
-  - ['[[ "$SHELL" != */zsh ]] && chsh -s $(which zsh)', Making zsh the default shell]
+    - visual-studio-code
+    - flycut
+    - fork
+    - telegram
+    - whatsapp
+    - microsoft-remote-desktop
+    - robo-3t

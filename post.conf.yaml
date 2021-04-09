@@ -1,0 +1,6 @@
+- shell:
+    - [
+        '[[ "$SHELL" != */zsh ]] && chsh -s $(which zsh)',
+        Making zsh the default shell,
+      ]
+    - ["npm i -g uuid npm-check-updates np", Installing global node modules]

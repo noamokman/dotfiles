@@ -17,3 +17,5 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 [[ "$OS" = "darwin" ]] && plug="-p dotbot-brew/brew.py"
 [[ "$OS" = "linux" ]] && plug="-p dotbot_plugin_aptget/aptget.py"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" ${plug} -c "${CONFIG}" "${@}"
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "post.conf.yaml" "${@}"

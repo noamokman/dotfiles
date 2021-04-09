@@ -2,6 +2,3 @@
     - curl
     - zsh
     - nodejs
-
-- shell:
-  - ['[[ "$SHELL" = */zsh ]] && chsh -s $(which zsh)', Making zsh the default shell]
