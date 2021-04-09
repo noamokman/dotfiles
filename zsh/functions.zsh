@@ -5,6 +5,7 @@ webclone() {
 
 gsync() {
     if ("$(git rev-parse --abbrev-ref HEAD)" == "master"); then
+        echo You are on master!
         return 1
     fi
     git add --all
