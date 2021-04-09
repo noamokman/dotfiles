@@ -16,5 +16,7 @@
     ~/.zsh:
     ~/.npmrc:
       force: true
+    ~/.nvm:
+      force: true
     ~/.oh-my-zsh:
       force: true

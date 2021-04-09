@@ -18,3 +18,6 @@
 [submodule "dotbot_plugin_aptget"]
 	path = dotbot_plugin_aptget
 	url = https://github.com/dein0s/dotbot_plugin_aptget.git
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/nvm-sh/nvm
