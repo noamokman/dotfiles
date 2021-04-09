@@ -2,6 +2,7 @@
     - curl
     - git
     - zsh
+    - nodejs
 
 - cask:
     - docker
