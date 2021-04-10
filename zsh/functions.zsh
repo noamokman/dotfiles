@@ -30,5 +30,5 @@ gcln() {
     local git_default_branch=$(git_default_branch)
     git fetch -p
     git checkout -B $git_default_branch origin/$git_default_branch
-    git branch | grep -v "$git_default_branch" | xargs git branch -D
+    git branch | grep -v "$git_default_branch" | xargs -r git branch -D
 }
