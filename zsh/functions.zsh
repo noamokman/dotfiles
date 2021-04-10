@@ -8,8 +8,8 @@ webclone() {
 }
 
 gsync() {
-    local git_default_branch=$(git_main_branch)
-    if ("$(git rev-parse --abbrev-ref HEAD)" == $git_default_branch); then
+    local git_default_branch=$(git_default_branch)
+    if [ "$git_default_branch" = "$(git rev-parse --abbrev-ref HEAD)" ]; then
         echo You are on $git_default_branch!
         return 1
     fi
@@ -27,7 +27,7 @@ gsyncf() {
 }
 
 gcln() {
-    local git_default_branch=$(git_main_branch)
+    local git_default_branch=$(git_default_branch)
     git fetch -p
     git checkout -B $git_default_branch origin/$git_default_branch
     git branch | grep -v "$git_default_branch" | xargs git branch -D
