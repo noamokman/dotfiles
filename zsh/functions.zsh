@@ -8,7 +8,7 @@ webclone() {
 }
 
 gsync() {
-    local git_default_branch=$git_main_branch
+    local git_default_branch=$(git_main_branch)
     if ("$(git rev-parse --abbrev-ref HEAD)" == $git_default_branch); then
         echo You are on $git_default_branch!
         return 1
