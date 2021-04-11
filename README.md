@@ -1,11 +1,11 @@
-Dotfiles
-========
+# Dotfiles
 
 This repo is my personal dotfiles.
 
 I use [Dotbot](https://github.com/anishathalye/dotbot).
 
 ## Installation
+
 Clone to `~/.dotfiles`
 
 ```sh
@@ -16,17 +16,19 @@ Run the install script
 
 ```sh
 cd ~/.dotfiles
-sudo ./install
+./install
 ```
 
 One liner:
 
 ```sh
-git clone https://github.com/noamokman/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && sudo ./install
+git clone https://github.com/noamokman/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && ./install
 ```
 
 ### Prerequisites
+
 You will probably already have these, but if not
+
 ```
 sudo apt-get install git python python-apt
 ```

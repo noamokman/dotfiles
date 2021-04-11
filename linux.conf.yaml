@@ -12,4 +12,6 @@
     - curl
     - zsh
     - nodejs
+    - python3-venv
+    - python3-pip
     - gh

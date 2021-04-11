@@ -3,7 +3,6 @@
 set -e
 
 OS="$(uname | awk '{print tolower($0)}')"
-CONFIG="${OS}.conf.yaml"
 DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -14,8 +13,13 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "base.conf.yaml" "${@}"
 
-[[ "$OS" = "darwin" ]] && plug="-p dotbot-brew/brew.py"
-[[ "$OS" = "linux" ]] && plug="-p dotbot_plugin_aptget/aptget.py"
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" ${plug} -c "${CONFIG}" "${@}"
+case $OS in
+darwin)
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot-brew/brew.py -c "darwin.conf.yaml" "${@}"
+    ;;
+linux)
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot_plugin_aptget/aptget.py -c "linux.conf.yaml" "${@}"
+    ;;
+esac
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "post.conf.yaml" "${@}"
