@@ -2,25 +2,20 @@ git_default_branch() {
     echo $(basename $(git symbolic-ref --short refs/remotes/origin/HEAD))
 }
 
-webclone() {
-    hub clone soluto-private/${1}
-    webstorm ./${1}
-}
-
 gsync() {
     local git_default_branch=$(git_default_branch)
     if [ "$git_default_branch" = "$(git rev-parse --abbrev-ref HEAD)" ]; then
         echo You are on $git_default_branch!
         return 1
     fi
-    message="$*"
+    local message="$*"
     git add --all
     git commit -am "${message=.}"
     git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 gsyncf() {
-    message="$*"
+    local message="$*"
     git add --all
     git commit -am "${message=.}"
     git push origin $(git rev-parse --abbrev-ref HEAD)
