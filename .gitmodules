@@ -21,3 +21,6 @@
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/nvm-sh/nvm
+[submodule "zsh/plugins/you-should-use"]
+	path = zsh/plugins/you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use

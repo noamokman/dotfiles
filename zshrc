@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -21,6 +23,8 @@ plugins=(
   kubectl
   github
   zsh-syntax-highlighting
+  aws
+  you-should-use
 )
 
 if ((!${fpath[(I) / usr / local / share / zsh / site - functions]})); then
@@ -37,3 +41,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 [[ -f "$HOME/.zshrc.local.sh" ]] && \. "$HOME/.zshrc.local.sh"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
