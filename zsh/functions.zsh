@@ -27,3 +27,7 @@ gcln() {
     git checkout -B $git_default_branch origin/$git_default_branch
     git branch | grep -v "$git_default_branch" | xargs -r git branch -D
 }
+
+load-gh-token() {
+    export GITHUB_TOKEN=$(cat ~/.config/gh/hosts.yml | yq '."github.com".oauth_token')
+}
