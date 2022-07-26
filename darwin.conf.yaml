@@ -7,6 +7,7 @@
     - kubectx
     - gh
     - python3
+    - yq
 
 - cask:
     - docker
