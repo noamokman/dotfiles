@@ -28,6 +28,15 @@ gcln() {
     git branch | grep -v "$git_default_branch" | xargs -r git branch -D
 }
 
+gqpr() {
+    local message="$*"
+    local final_message="${message:=fix}"
+    local branch_name=$(echo ${final_message// /-} | tr '[:upper:]' '[:lower:]')
+    gcb "$branch_name"
+    gsync "$final_message"
+    gpr | tail -1 | pbcopy
+}
+
 load-gh-token() {
     export GITHUB_TOKEN=$(cat ~/.config/gh/hosts.yml | yq '."github.com".oauth_token')
 }
