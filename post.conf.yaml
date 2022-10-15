@@ -3,4 +3,7 @@
         'if [[ "$SHELL" != */zsh ]]; then chsh -s $(which zsh); fi',
         Making zsh the default shell,
       ]
-    - ["npm i -g uuid npm-check-updates np", Installing global node modules]
+    - [
+        'yarn add global uuid npm-check-updates clipboard-cli',
+        Installing global node modules,
+      ]
