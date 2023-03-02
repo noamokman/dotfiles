@@ -4,6 +4,6 @@
         Making zsh the default shell,
       ]
     - [
-        'yarn add global uuid npm-check-updates clipboard-cli',
+        'yarn global add uuid npm-check-updates clipboard-cli',
         Installing global node modules,
       ]

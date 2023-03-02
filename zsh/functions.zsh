@@ -25,7 +25,7 @@ gcln() {
     local git_default_branch=$(git_default_branch)
     git fetch -p
     git checkout -B $git_default_branch origin/$git_default_branch
-    git branch | grep -v "$git_default_branch" | xargs -r git branch -D
+    git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v "$git_default_branch" | xargs -r git branch -D
 }
 
 gqpr() {
@@ -34,7 +34,7 @@ gqpr() {
     local branch_name=$(echo ${final_message// /-} | tr '[:upper:]' '[:lower:]')
     gcb "$branch_name"
     gsync "$final_message"
-    gpr | tail -1 | pbcopy
+    gpr | tail -1 | clipboard
 }
 
 load-gh-token() {
