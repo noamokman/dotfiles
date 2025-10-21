@@ -11,14 +11,14 @@ gsync() {
     local message="$*"
     git add --all
     git commit -am "${message:=.}"
-    git push origin $(git rev-parse --abbrev-ref HEAD)
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 gsyncf() {
     local message="$*"
     git add --all
     git commit -am "${message:=fix}"
-    git push origin $(git rev-parse --abbrev-ref HEAD)
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 gcln() {
