@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -22,6 +20,7 @@ plugins=(
   docker-compose
   kubectl
   github
+  gh
   zsh-syntax-highlighting
   aws
   you-should-use
@@ -41,6 +40,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 [[ -f "$HOME/.zshrc.local.sh" ]] && \. "$HOME/.zshrc.local.sh"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/noamokman/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/noamokman/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/noamokman/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/noamokman/google-cloud-sdk/completion.zsh.inc'; fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/noamokman/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
