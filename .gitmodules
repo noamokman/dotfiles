@@ -15,12 +15,12 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "dotbot_plugin_aptget"]
-	path = dotbot_plugin_aptget
-	url = https://github.com/dein0s/dotbot_plugin_aptget.git
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/nvm-sh/nvm
 [submodule "zsh/plugins/you-should-use"]
 	path = zsh/plugins/you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use
+[submodule "dotbot-apt"]
+	path = dotbot-apt
+	url = https://github.com/bryant1410/dotbot-apt

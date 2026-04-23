@@ -1,4 +1,7 @@
-- aptget:
+- plugins:
+    - dotbot-apt
+
+- apt:
     - curl
     - zsh
     - nodejs

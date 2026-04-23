@@ -1,3 +1,6 @@
+- plugins:
+    - dotbot-brew
+
 - brew:
     - curl
     - git
@@ -20,8 +23,6 @@
     - telegram-desktop
     - whatsapp
     - microsoft-remote-desktop
-    - robo-3t
     - spotify
     - slack
-    - fig
     - jetbrains-toolbox

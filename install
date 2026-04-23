@@ -15,10 +15,10 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 case $OS in
 darwin)
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot-brew/brew.py -c "darwin.conf.yaml" "${@}"
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "darwin.conf.yaml" "${@}"
     ;;
 linux)
-    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot_plugin_aptget/aptget.py -c "linux.conf.yaml" "${@}"
+    sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "linux.conf.yaml" "${@}"
     ;;
 esac
 

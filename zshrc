@@ -26,7 +26,7 @@ plugins=(
   you-should-use
 )
 
-if ((!${fpath[(I) / usr / local / share / zsh / site - functions]})); then
+if ((!${fpath[(I)/usr/local/share/zsh/site-functions]})); then
   FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
 ZSH_DISABLE_COMPFIX=true
